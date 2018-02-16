@@ -9,7 +9,7 @@ layout: home
 <ul>
     {% for proj in site.projects %}
     {% if proj.category=="project" %}
-        <li><a href="{{ proj.url }}">{{ proj.title }}</a></li>
+        <li><a href="{{site.baseurl}}{{ proj.url }}">{{ proj.title }}</a></li>
     {% endif %}
     {% endfor %}
 </ul>
