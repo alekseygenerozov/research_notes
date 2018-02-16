@@ -1,0 +1,14 @@
+---
+title: SMBH_envs
+layout: default
+category: project
+---
+<!-- 
+<a href="cool_notes">cool_notes</a> -->
+<ul>
+    {% for proj in site.projects %}
+    {% if proj.category=="SMBH_env" %}
+        <li><a href="{{ proj.url }}">{{ proj.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+</ul>
