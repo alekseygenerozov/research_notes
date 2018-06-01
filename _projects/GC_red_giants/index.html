@@ -1,0 +1,14 @@
+---
+title: GC_red_giants
+layout: default
+category: project
+---
+<!-- 
+<a href="cool_notes">cool_notes</a> -->
+<ul>
+    {% for proj in site.projects %}
+    {% if proj.category=="GC_red_giants" %}
+        <li><a href="{{ site.baseurl }}{{ proj.url }}">{{ proj.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+</ul>
