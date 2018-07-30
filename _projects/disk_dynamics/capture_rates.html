@@ -13049,14 +13049,14 @@ hEtn2/YBnH/CjIg4SANXRETyIGPMxf7Heb9t2xVzK4uIBCaVRBERERE5jwauiIiIiMh5VBJFRERE
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The table below shows binary formation rate from tidal, grav. wave, 3-body capture. The stars are assumed to be in a disk configuration with H/R~0.1. Thus, the spatial density of stars is enhanced by a factor of (H/R)^-1 compared to the isotropized profile above. The velocity dispersion is reduced by this factor.</p>
 <p>In rows that have a "BH (disk)" under "Species", the BHs are also assumed to be in a disk configuration.</p>
-<p>We estimate the tidal capture rate using both the tidal coupling constants from linear theory and from Ivanov and Novikov 2001 (as in Generozov et al. 2018). Unfortunately latter may not be trust-worthy if the mass of the capturer is greater than or equal to the victim star...All of the massive stars are modelled as n=3/2 polytropes (Better to use n=3?)</p>
+<p>We estimate the tidal capture rate using both the tidal coupling constants from linear theory and from Ivanov and Novikov 2001 (as in Generozov et al. 2018). Unfortunately latter may not be trust-worthy if the mass of the capturer is greater than or equal to the victim star...All of the massive stars are modelled as n=3 polytropes)</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">ascii</span>
@@ -13072,19 +13072,19 @@ hEtn2/YBnH/CjIg4SANXRETyIGPMxf7Heb9t2xVzK4uIBCaVRBERERE5jwauiIiIiMh5VBJFRERE
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[37]:</div>
+<div class="prompt output_prompt">Out[1]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 &lt;Table masked=True length=7&gt;
-<table id="table139760437551824" class="table-striped table-bordered table-condensed">
+<table id="table140063002224464" class="table-striped table-bordered table-condensed">
 <thead><tr><th>Process</th><th>Species</th><th>Rate</th><th>Expected Number</th><th>Notes</th></tr></thead>
 <thead><tr><th>str14</th><th>str25</th><th>float64</th><th>float64</th><th>str42</th></tr></thead>
-<tr><td>TC</td><td>Stars (Disk)-Stars (Disk)</td><td>3e-06</td><td>15.0</td><td>Equal mass</td></tr>
-<tr><td>-</td><td>-</td><td>2.4e-06</td><td>13.0</td><td>Equal mass/Lin Theory</td></tr>
-<tr><td>-</td><td>Stars (Disk)-BH</td><td>8e-08</td><td>0.5</td><td>--</td></tr>
-<tr><td>-</td><td>-</td><td>5e-08</td><td>0.3</td><td>Lin Theory</td></tr>
-<tr><td>-</td><td>Stars (Disk)-BH (Disk)</td><td>1.6e-05</td><td>100.0</td><td>Lin Theory</td></tr>
+<tr><td>TC</td><td>Stars (Disk)-Stars (Disk)</td><td>4.1e-07</td><td>4.1</td><td>Equal mass</td></tr>
+<tr><td>-</td><td>-</td><td>3.8e-07</td><td>1.9</td><td>Equal mass/Lin Theory</td></tr>
+<tr><td>-</td><td>Stars (Disk)-BH</td><td>2e-08</td><td>0.16</td><td>--</td></tr>
+<tr><td>-</td><td>-</td><td>1.1e-08</td><td>0.09</td><td>Lin Theory</td></tr>
+<tr><td>-</td><td>Stars (Disk)-BH (Disk)</td><td>7.5e-06</td><td>50.0</td><td>Lin Theory</td></tr>
 <tr><td>GW Capture</td><td>BH (Disk)-BH (Disk)</td><td>5e-07</td><td>--</td><td>(Using numerical profiles for convenience)</td></tr>
 <tr><td>3-body capture</td><td>BHs (Disk)</td><td>3.7e-10</td><td>--</td><td>--</td></tr>
 </table>
