@@ -7,7 +7,7 @@ category: project
 <a href="cool_notes">cool_notes</a> -->
 <ul>
     {% for proj in site.projects %}
-    {% if proj.category=="SMBH_env" %}
+    {% if proj.category=="SMBH_envs" %}
         <li><a href="{{ site.baseurl }}{{ proj.url }}">{{ proj.title }}</a></li>
     {% endif %}
     {% endfor %}
