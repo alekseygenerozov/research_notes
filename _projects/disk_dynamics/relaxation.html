@@ -1078,12 +1078,17 @@ unity. Thus,</p>
 </script></span>
 <p><strong><span class="math"><script type="math/tex">t_{\rm rx, o}</script></span> for M31 and in N-body simulations</strong></p>
 <p>For M31 <span class="math"><script type="math/tex">t_{\rm rx,o}</script></span> is <span class="math"><script type="math/tex">\sim 1.5\times 10^{12}/\ln(\Lambda)</script></span>
-years (assuming <span class="math"><script type="math/tex">R\sim {\rm 1 pc}</script></span> <span class="math"><script type="math/tex">N=10^7</script></span>, <span class="math"><script type="math/tex">M=M_{\odot}</script></span>, and <span class="math"><script type="math/tex">M_{\rm bh}=10^8 M_{\odot}</script></span>).</p>
-<p>If the disk is <span class="math"><script type="math/tex">5\times 10^9</script></span> years old, then it has been around for <span class="math"><script type="math/tex">0.003 \ln (\Lambda)</script></span> relaxation times.</p>
-<p>In our N-body simulations <span class="math"><script type="math/tex">t_{\rm rx,o}</script></span>
-for the light stars corresponds to <span class="math"><script type="math/tex">3\times 10^6/\ln \Lambda</script></span> orbital periods.
-We evolve the disk for 500 orbits or
-<span class="math"><script type="math/tex">1.6\times 10^{-4} \ln \Lambda</script></span> relaxation times. (This calculation assumes 500 stars with <span class="math"><script type="math/tex">10^{-5}</script></span> times the mass of the central object).</p>
+years (assuming <span class="math"><script type="math/tex">R\sim {\rm 1 pc}</script></span> <span class="math"><script type="math/tex">N=10^7</script></span>, <span class="math"><script type="math/tex">M=M_{\odot}</script></span>, and <span class="math"><script type="math/tex">M_{\rm bh}=10^8 M_{\odot}</script></span>).
+More realistically the M31 nucleus will include a spectrum of masses. To account for this, we replace N, with <span class="math"><script type="math/tex">10^7 M_{\odot}/\overline{M}</script></span>
+(where <span class="math"><script type="math/tex">\overline{M}</script></span> is mean stellar mass) and M with <span class="math"><script type="math/tex">\overline{M^2}</script></span> in the relaxation time.
+For a <span class="math"><script type="math/tex">5\times 10^9</script></span> year old stellar population drawn from a Kroupa IMF <span class="math"><script type="math/tex">\overline{M}\approx 0.22 M_{\odot}</script></span> and <span class="math"><script type="math/tex">\overline{M^2}\approx 0.13 M_{\odot}^2</script></span>, where we have used the mapping between stellar and remnant masses in Ch. 7 of Merritt 2013.
+In this case <span class="math"><script type="math/tex">t_{\rm rx, o} \sim 2.3\times 10^{12}/\ln(\Lambda)</script></span>
+years.</p>
+<p>If the disk is <span class="math"><script type="math/tex">5\times 10^9</script></span> years old, then it has been around for <span class="math"><script type="math/tex">0.0022 \ln (\Lambda)</script></span> relaxation times.</p>
+<span class="math"><script type="math/tex; mode=display">\ln \Lambda\approx \ln \left( \frac{0.4 M}{M_{\rm bh}}\right)\approx 18,
+</script></span>
+<p>thus the disk has been around for 0.04 relaxation times, which implies <span class="math"><script type="math/tex">H/R \approx 0.6</script></span>.</p>
+<p>In Heather’s N-body simulations there is a disk with 1% of the mass of the central body, and 100 stars. This implies the relaxation time is <span class="math"><script type="math/tex">\sim 6.3 \times 10^{-6} \ln (\Lambda)</script></span> orbital periods. A disk evolved for 500 orbits would have survived 0.003 <span class="math"><script type="math/tex">\ln \Lambda</script></span> relaxation times. <span class="math"><script type="math/tex">\ln \Lambda\approx 8</script></span> so the disk survives for 0.025 relaxation times (remarkably similar to what we found for M31).</p>
 
   </body>
 </html>
