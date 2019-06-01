@@ -1,5 +1,5 @@
 ---
-title: tideseta_alt
+title: disk_dynamicselaxation
 category: 
 layout: default
 ---
@@ -26,37 +26,62 @@ layout: default
   }
 </style>
 </head>
-<body><div id="readme" class="container"><article class="markdown-body entry-content"><p><strong>Alternative expression for $\beta$ at the surface.</strong></p>
-<p>Suppose the displacement within the star is $R \boldsymbol{\xi_n (r)}$, where $\boldsymbol{\xi_n(r)}$ is an eigenmode and R is the stellar radius.</p>
-<p>The corresponding potential perturbation at $\mathbf{R}$ (on the surface) is</p>
-<p>[\begin{aligned}
-\delta \Phi&amp;=-G\int \frac{\rho_1(r&apos;) Y_\ell^m(\theta&apos;, \phi&apos;) }{|\mathbf{R}-\mathbf{r&apos;}|} d^3 r&apos;\</p>
-<p>&amp;=\frac{-4 \pi G}{2\ell +1} Y_\ell^m(\theta, \phi) \int \frac{r&apos;^{2} \rho&apos;(r&apos;)}{R^{\ell+1}} Y_\ell^m(\theta&apos;, \phi&apos;)^{\star} Y_\ell^m(\theta&apos;, \phi&apos;) d^3 r&apos;\</p>
-<p> &amp;=\frac{-4 \pi G}{2\ell +1} Y_\ell^m(\theta, \phi) \int r&apos;^{2+\ell} \rho_1(r&apos;) dr&apos; ,,(1)
- \end{aligned}
-]</p>
-<p>where $\rho_1(r&apos;) Y_\ell^m(\theta&apos;, \phi&apos;)$ is the first order perturbation to the density. In the second line we use the multipole expansion of the potential (see eq. 3.70 in Jackson). We only consider the $\ell=2, m=2$ component of the expansion. In the third line we integrate over the angular coordinates ($\theta$ and $\phi$).</p>
-<p>From the continuity equation</p>
-<p>$-\rho_1(r&apos;) Y_\ell^m= \nabla \cdot (\rho_o(r&apos;) \boldsymbol{\xi_n(r&apos;)})$,</p>
-<p>where $\rho_o$ is equilibrium density. After simplification</p>
+<body><div id="readme" class="container"><article class="markdown-body entry-content"><p>For a single species population the relaxation
+time is</p>
 <p>[
-\begin{split}
--\rho_1(r&apos;) = \frac{R}{r&apos;} &amp;\left[ \vphantom{\frac{R}{r&apos;}}-\ell(\ell+l) \xi_{h,n}(r&apos;) \rho_o(r&apos;) \right. \</p>
-<p>&amp;+ \left. 2 \xi_{r, n}(r&apos;) \rho_o(r&apos;) + r&apos; \frac{d[\rho(r&apos;) \xi_{r, n}(r&apos;)]}{dr&apos;}  \right],
-\end{split}
+  \begin{aligned}
+    t_{\rm rx}=\frac{\sigma^3}{G^2 n M^2\ln \Lambda},
+  \end{aligned}
+]
+where $\sigma$ is the velocity dispersion, $n$ is the number density, $M$ is the mass of each star, and
+$\ln \Lambda$ is the Coulomb logarithm. The number density is</p>
+<p>[
+\begin{aligned}
+&amp;n\approx \frac{N}{R^2 H} =n_o \frac{H}{R}\
+&amp;n_o\equiv \frac{N}{R^3},
+\end{aligned}
 ]</p>
-<p>where $\xi_{h,n}$ and $\xi_{r, n}$ are the radial and tangential parts of the eigenmode.</p>
-<p>Then subsituting the above expression into eq. 1 and integrating the last term by parts gives</p>
-<p>$\delta \Phi = \frac{4 \pi G}{(2 \ell+1) R^{\ell}} \underbrace{\int \ell \left[\xi_{r, n}(r&apos;) +(\ell+1) \xi_{h, n}(r&apos;) \right] \rho_o (r&apos;) r&apos;^{\ell+1} dr&apos;}_{Q M R^{\ell-1}}$</p>
-<p>$\boxed{=\frac{4 \pi G M}{(2 \ell+1) R} Q}$,</p>
-<p>where Q is the overlap integral.
-The radial displacement scales linearly with the total potential perturbation. The stellar potential perturbation also scales linearly with the radial displacement (since it is a constant times the total potential perturbation)
-Then,</p>
-<p>$(\beta-1) U = \frac{\xi_r}{\xi_{r,n}} \delta\Phi$,</p>
-<p>where U is the tidal potential, and</p>
-<p>$\xi_r=\frac{Q \xi_{r,n}}{\omega^2 R} U$</p>
-<p>at the stellar surface. Therefore,</p>
-<p>$\boxed{\beta-1=\frac{4 \pi}{2\ell+1} \frac{G M}{R^3} \frac{Q^2}{\omega^2}}$</p>
+<p>where $R$ and $H$ are the radius and scale height of the disk, and N is the number of stars. Furthermore,</p>
+<p>[
+\begin{aligned}
+&amp;\sigma\approx \sigma_o \frac{H}{R}\
+&amp;\sigma_o=\sqrt{\frac{G M_{\rm bh}}{R}},
+\end{aligned}
+]</p>
+<p>where $M_{\rm bh}$ is the mass of the central object. Then</p>
+<p>[
+\begin{aligned}
+&amp;t_{\rm rx}=t_{\rm rx,o} \left(\frac{H}{R}\right)^4\
+&amp;t_{\rm rx,o}\equiv\frac{\sigma_o^3}{G^2 n_o M^2 \ln \Lambda}.
+\end{aligned}
+]</p>
+<p>The relaxation time is the time-scale for a particle to change its energy by a factor of order
+unity. Thus,</p>
+<p>[
+\begin{aligned}
+\frac{\sigma}{\dot{\sigma}}\approx t_{\rm rx}.
+\end{aligned}
+]</p>
+<p>Solving the above equation for (H/R) gives</p>
+<p>[
+\frac{H}{R}=\left[\left(\frac{4 t}{t_{\rm rx,o}}\right)+\left(\frac{H}{R}\right)^4_o \right]^{1/4},
+]</p>
+<p>where $(H/R)<em>o$ is the initial aspect ratio of the disk. For $t/t</em>{\rm rx, o}\gg (H/R)^4_o$ this simplifies to</p>
+<p>[
+\boxed{\frac{H}{R}=\left[\frac{4 t}{t_{\rm rx,o}}\right]^{1/4}}
+]</p>
+<p><strong>$t_{\rm rx, o}$ for M31 and in N-body simulations</strong></p>
+<p>For M31 $t_{\rm rx,o}$ is $\sim 1.5\times 10^{12}/\ln(\Lambda)$
+years (assuming $R\sim {\rm 1 pc}$ $N=10^7$, $M=M_{\odot}$, and $M_{\rm bh}=10^8 M_{\odot}$).
+More realistically the M31 nucleus will include a spectrum of masses. To account for this, we replace N, with $10^7 M_{\odot}/\overline{M}$
+(where $\overline{M}$ is mean stellar mass) and M with $\overline{M^2}$ in the relaxation time.
+ For a $5\times 10^9$ year old stellar population drawn from a Kroupa IMF $\overline{M}\approx 0.22 M_{\odot}$ and $\overline{M^2}\approx 0.13 M_{\odot}^2$, where we have used the mapping between stellar and remnant masses in Ch. 7 of Merritt 2013.
+In this case $t_{\rm rx, o} \sim 2.3\times 10^{12}/\ln(\Lambda)$
+years.</p>
+<p>If the disk is $5\times 10^9$ years old, then it has been around for $0.0022 \ln (\Lambda)$ relaxation times.</p>
+<p>[\ln \Lambda\approx \ln \left( \frac{0.4 M}{M_{\rm bh}}\right)\approx 18,]</p>
+<p>thus the disk has been around for 0.04 relaxation times, which implies $H/R \approx 0.6$.</p>
+<p>In Heather&apos;s N-body simulations there is a disk with 1% of the mass of the central body, and 100 stars. This implies the relaxation time is $\sim 6.3 \times 10^{-6} \ln (\Lambda)$ orbital periods. A disk evolved for 500 orbits would have survived 0.003 $\ln \Lambda$ relaxation times. $\ln \Lambda\approx 8$ so the disk survives for 0.025 relaxation times (remarkably similar to what we found for M31).</p>
 </article></div><div style="background-color: #b4b2b2;width: 50px;height:50px;line-height: 50px;text-align: center;position: fixed;bottom: 10px;right: 10px;padding-top:5px;" onclick="document.documentElement.scrollTop = document.body.scrollTop =0;">
   <svg t="1533629773982" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1035" xlink="http://www.w3.org/1999/xlink" width="40" height="40"><defs><style type="text/css">@font-face { font-family: uc-nexus-iconfont; src: url("chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff") format("woff"), url("chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf") format("truetype"); }
   </style></defs><path d="M536.255427 195.182354c-7.804756-7.804756-17.966187-11.615549-28.311813-11.615549-9.43693 0-18.874883 3.449565-26.496467 10.163477-2.360767 1.452071-4.356214 3.267417-6.352685 5.262864L218.47792 455.611735c-15.607466 15.60542-15.607466 40.834011 0 56.43943 15.607466 15.607466 41.558511 15.607466 57.167001 0l193.46013-192.733583 0 600.526219c0 22.1423 17.787108 39.927361 39.927361 39.927361 22.140253 0 39.927361-17.785062 39.927361-39.927361L548.959773 319.317583 737.15704 508.422522c15.607466 15.607466 40.469714 15.607466 56.078203 0 15.607466-15.607466 15.425318-40.834011-0.182149-56.441477L536.255427 195.182354 536.255427 195.182354z" p-id="1036" fill="#333"/><path d="M101.784174 143.097092l816.674071 0c22.140253 0 39.925315-17.785062 39.925315-39.927361 0-22.140253-17.784038-39.925315-39.925315-39.925315L101.784174 63.244416c-22.140253 0-39.927361 17.785062-39.927361 39.925315C61.856813 125.31203 79.643921 143.097092 101.784174 143.097092L101.784174 143.097092z" p-id="1037" fill="#333"/></svg>
