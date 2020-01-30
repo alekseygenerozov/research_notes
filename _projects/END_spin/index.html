@@ -1,0 +1,14 @@
+---
+title: END_spin
+layout: default
+category: project
+---
+<!-- 
+<a href="cool_notes">cool_notes</a> -->
+<ul>
+    {% for proj in site.projects %}
+    {% if proj.category=="END_spin" %}
+        <li><a href="{{ site.baseurl }}{{ proj.url }}">{{ proj.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+</ul>
