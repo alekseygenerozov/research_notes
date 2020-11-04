@@ -1,0 +1,14 @@
+---
+title: nayakshin_collab
+layout: default
+category: project
+---
+<!-- 
+<a href="cool_notes">cool_notes</a> -->
+<ul>
+    {% for proj in site.projects %}
+    {% if proj.category=="nayakshin_collab" %}
+        <li><a href="{{ site.baseurl }}{{ proj.url }}">{{ proj.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+</ul>
